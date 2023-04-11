@@ -1,16 +1,20 @@
-a = input()
+a = int(input())
 
-ans_cnt = 0
 
-if int(a) <= 99:
-    ans_cnt = int(a)
-elif int(a) == 1000:
-    ans_cnt = 144
-else:
-    ans_cnt += 99
-    for _ in range(100, int(a)+1):
-        num_list = list(map(int, str(_)))
-        if num_list[0]-num_list[1] == num_list[1] - num_list[2]:
-            ans_cnt += 1
+def isPrime(number):
+    if (number < 2):
+        return False
+    i = 2
+    while (i*i <= number):
+        if (number % i == 0):
+            return False
+        i += 1
+    return True
 
-print(ans_cnt)
+
+for _ in range(a):
+    target = int(input())
+    for i in range(target//2, 1, -1):
+        if (isPrime(i) & isPrime(target-i)):
+            print(i, target-i)
+            break
