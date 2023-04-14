@@ -1,9 +1,7 @@
 arr = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
 
 
-def binarySearch(arr, targetNum):
-    start = 0
-    end = len(arr) - 1
+def binarySearch(targetNum, start, end):
 
     while start <= end:
         midIndex = (start+end)//2
@@ -17,4 +15,4 @@ def binarySearch(arr, targetNum):
     return -1
 
 
-print(binarySearch(arr, 3))
+print(binarySearch(3, 0, len(arr) - 1))
