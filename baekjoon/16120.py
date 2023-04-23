@@ -11,4 +11,4 @@ for i in range(len(a)):
     stack_size += 1
     if stack[i-4:i] == ['P', 'P', 'A', 'P']:
         print(i)
-        stack_size =
+        stack_size
