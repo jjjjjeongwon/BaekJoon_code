@@ -20,9 +20,9 @@ def postorder(first, end):
             mid = i  # mid = i로 바꾼다 (가운데 값 설정) 처음값은 6
             break
 
-    postorder(first+1, mid-1)  # postorder(1, 5?) left만하고
-    postorder(mid, end)  # right만 처리
-    print(num_list[first])  # 여기는 뭔데 다시 보기 이줄만;;;
+    postorder(first+1, mid-1)  # postorder(1, 5?) left만하고  # 왼쪽확인
+    postorder(mid, end)  # right만 처리 # 오른쪽확인
+    print(num_list[first])  # 끝나면 출력
 
 
 postorder(0, len(num_list)-1)  # first==0, end==num_list의 길이 -1 ==8
