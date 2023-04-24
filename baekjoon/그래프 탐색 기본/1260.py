@@ -44,3 +44,60 @@ def DFS(V):
 DFS(V)
 print()
 BFS(V)
+
+
+# from collections import deque
+# import sys
+
+# input = sys.stdin.readline
+
+
+# n,m,v = map(int,input().split())
+# edges = [[] for _ in range(n+1)]
+
+# for _ in range(m):
+#     a,b = map(int,input().split())
+#     if b not in edges[a]:
+#         edges[a].append(b)
+#     if a not in edges[b]:
+#         edges[b].append(a)
+
+# def DFS(start):
+#     stack = deque([start])
+#     visited = []
+
+#     while stack:
+#         now = stack.pop()
+#         if now not in visited:
+#             visited.append(now)
+#             temp = []
+#             for v in edges[now]:
+#                 if v not in visited:
+#                     temp.append(v)
+#             temp.sort(reverse=True)
+#             stack += temp
+#     visited_str = [str(i) for i in visited]
+#     return ' '.join(visited_str)
+
+
+# def BFS(start):
+#     q = deque([start])
+#     visited = [start]
+
+#     while q:
+#         now = q.popleft()
+#         temp = []
+#         for v in edges[now]:
+#             if v not in visited:
+#                 temp.append(v)
+
+#         temp.sort()
+#         q += temp
+#         for next in temp:
+#             visited.append(next)
+
+#     visited_str = [str(i) for i in visited]
+#     return ' '.join(visited_str)
+
+# print(DFS(v))
+# print(BFS(v))
