@@ -7,7 +7,6 @@ timetable = []
 for i in range(N):
     s, e = list(map(int, input().split()))
     timetable.append([s, e])
-
 timetable.sort(key=lambda x: (x[1], x[0]))
 
 count = 0
