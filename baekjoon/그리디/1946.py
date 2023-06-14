@@ -1,17 +1,17 @@
 import sys
 input = sys.stdin.readline
 
-T = int(input())
+for _ in range(int(input())):
+    n = int(input())
+    lst = [0]*(n+1)
+    for _ in range(n):
+        a, b = map(int, input().split())
+        lst[a] = b
 
-
-for i in range(T):
-    N = int(input())
-    count = 1
-    scoreList = []
-    for i in range(N):
-        A, B = list(map(int, input().split()))
-        scoreList.append([A, B])
-
-    a = scoreList.sort()
-
-    print(a)
+    ans = 1
+    second_max = lst[1]
+    for i in range(2, n+1):
+        if lst[i] < second_max:
+            second_max = lst[i]
+            ans += 1
+    print(ans)
